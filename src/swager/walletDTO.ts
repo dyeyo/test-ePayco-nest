@@ -12,7 +12,7 @@ export class RechargeWalletDTO {
 
 }
 
-export class GenerateTokenDto {
+export class GenerateTokenDTO {
   @ApiProperty({ description: 'El documento del usuario' })
   document: string;
 
@@ -23,14 +23,22 @@ export class GenerateTokenDto {
   amount: number;
 }
 
-export class ConfirmPaymentDto {
+export class ConfirmPaymentDTO {
   @ApiProperty({ description: 'ID generado en  generate-token' })
   session_id: string;
 
-  @ApiProperty({ description: 'Tokenm enviado al correo del usuario' })
+  @ApiProperty({ description: 'Token enviado al correo del usuario' })
   token: string;
 
   @ApiProperty({ description: 'El monto a tranferir' })
   amount: number;
 
+}
+
+export class CheckBalanceDTO {
+  @ApiProperty({ description: 'Documento del usuario' })
+  document: string;
+
+  @ApiProperty({ description: 'Telefono/celular del usuario' })
+  cellphone: string;
 }

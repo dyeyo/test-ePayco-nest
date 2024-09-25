@@ -13,3 +13,7 @@ export interface IConfirmPayment {
   token: string;
   amount: number;
 }
+export interface ICheckBalance {
+  document: string;
+  cellphone: string;
+}
